@@ -1,7 +1,8 @@
 import './App.css';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import React, { Component } from 'react';
-import './Login.js'
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import React from 'react';
+import Login from './Login';
+import './Login.css'
 function App() {
   return (
   <div className="app">
