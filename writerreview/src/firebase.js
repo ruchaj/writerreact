@@ -1,4 +1,7 @@
 import { initializeApp } from "firebase/app";
+import 'firebase/compat/firestore'; //v9
+import 'firebase/compat/auth'; //v9
+import firebase from 'firebase/compat/app'; //v9
 
 import {
   GoogleAuthProvider,
@@ -39,6 +42,9 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const googleProvider = new GoogleAuthProvider();
+const auth = getAuth(app);
+const db = getFirestore(app);
+
 const signInWithGoogle = async () => {
   try {
     const res = await signInWithPopup(auth, googleProvider);
@@ -93,4 +99,13 @@ const logInWithEmailAndPassword = async (email, password) => {
   const logout = () => {
     signOut(auth);
   };
-        
+  export {
+    auth,
+    db,
+    signInWithGoogle,
+    logInWithEmailAndPassword,
+    registerWithEmailAndPassword,
+    sendPasswordReset,
+    logout,
+  };
+     
