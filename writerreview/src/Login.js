@@ -1,13 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-<<<<<<< HEAD
 import { useAuthState } from "react-firebase-hooks/auth";
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
-=======
-import { auth, logInWithEmailAndPassword, signInWithGoogle } from "./firebase";
-import { useAuthState } from "react-firebase-hooks/auth";
->>>>>>> b938c3b390157c3fbfd2c073f334796f47b7f565
 import "./Login.css";
 
 function Login() {

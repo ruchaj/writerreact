@@ -1,6 +1,5 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-<<<<<<< HEAD
 import { getAnalytics } from "firebase/analytics";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth"
 // TODO: Add SDKs for Firebase products that you want to use
@@ -18,15 +17,11 @@ const firebaseConfig = {
   appId: "1:877240818438:web:0c20c53a8bbd3ffd5c9c87",
   measurementId: "G-70SCYG5JP5"
 };
-=======
-import 'firebase/compat/firestore'; //v9
-import 'firebase/compat/auth'; //v9
-import firebase from 'firebase/compat/app'; //v9
->>>>>>> b938c3b390157c3fbfd2c073f334796f47b7f565
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+const googleProvider = new GoogleAuthProvider();
+const auth = getAuth(app);
+const db = getFirestore(app);
 
 /*import { initializeApp } from "firebase/app";
 import {
@@ -69,7 +64,7 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const googleProvider = new GoogleAuthProvider();
 const auth = getAuth(app);
-const db = getFirestore(app);
+const db = getFirestore(app);*/
 
 const signInWithGoogle = async () => {
   try {
@@ -124,10 +119,6 @@ const logInWithEmailAndPassword = async (email, password) => {
   };
   const logout = () => {
     signOut(auth);
-<<<<<<< HEAD
-  }; */
-        
-=======
   };
   export {
     auth,
@@ -138,5 +129,3 @@ const logInWithEmailAndPassword = async (email, password) => {
     sendPasswordReset,
     logout,
   };
-     
->>>>>>> b938c3b390157c3fbfd2c073f334796f47b7f565
